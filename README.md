@@ -7,7 +7,7 @@ Open up the website on lesliejury.github.io/uma_racer
 
 I wrote this software to practice building a web application with Django. It helped me learn how a web page can receive information from a user, send that information to Python code, and display the result in an HTML template.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/hNIxZyXrYqg)
 
 # Web Pages
 
