@@ -2,7 +2,7 @@
 
 Uma Racer is a Django web app that lets users choose racers and run a simulated horse-girl race. The simulation includes straight sections, corners, an uphill section, and abilities that can affect a racer's score.
 
-Open up the website on lesliejury.github.io/uma-racer
+Open up the website on lesliejury.github.io/uma_racer
 
 
 I wrote this software to practice building a web application with Django. It helped me learn how a web page can receive information from a user, send that information to Python code, and display the result in an HTML template.
