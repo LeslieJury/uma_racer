@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uma Racer</title>
+    <link rel="stylesheet" href="{% static 'race/styles.css' %}">
+</head>
+<body>
+    <main class="container">
+        <header class="hero">
+            <img class="curren-image" src="{% static 'race/images/Curren_Racing.png' %}" alt="Curren racing">
+            <h1>Uma Racer</h1>
+            <p>Choose racers and start a race.</p>
+        </header>
+
+        <section class="card">
+            <img class="uniform-image" src="{% static 'race/images/Curren_Uniform.png' %}" alt="Curren in uniform">
+
+            <h2>Choose your racing stars</h2>
+
+            <form method="post" action="{% url 'race:run_race' %}">
+                {% csrf_token %}
+
+                <fieldset>
+                    <legend>Choose at least two racers</legend>
+
+                    {% for racer in racers %}
+                    <label class="choice">
+                        <input type="checkbox" name="racers" value="{{ racer.id }}">
+                        <span>
+                            {{ racer.name }}
+                            Speed: {{ racer.speed }}
+                            Stamina: {{ racer.stamina }}
+                            Power: {{ racer.power }}
+                        </span>
+                    </label>
+                    {% endfor %}
+                </fieldset>
+
+                <label for="distance">Choose a race distance</label>
+                <select id="distance" name="distance">
+                    <option value="1200">1200m - Sprint</option>
+                    <option value="1900" selected>1900m - Mile</option>
+                    <option value="2400">2400m - Medium</option>
+                </select>
+
+                <button type="submit">Start the race!</button>
+            </form>
+        </section>
+
+    </main>
+</body>
+</html>

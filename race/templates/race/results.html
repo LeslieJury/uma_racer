@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uma Racer Results</title>
+    <link rel="stylesheet" href="{% static 'race/styles.css' %}">
+</head>
+<body>
+    <main class="container">
+        <header class="hero">
+            <img class="curren-image" src="{% static 'race/images/Curren_Racing.png' %}" alt="Curren racing">
+            <h1>Uma Racer</h1>
+            <p>Race results</p>
+        </header>
+
+        <section class="card">
+            <img class="first-place-image" src="{% static 'race/images/first.png' %}" alt="First place">
+
+            <h2>Results</h2>
+            <p>{{ distance }} meters</p>
+
+            <ol>
+                {% for racer in racers %}
+                <li>
+                    {{ racer.name }} - {{ racer.score }} points
+                </li>
+                {% endfor %}
+            </ol>
+
+            <a class="button" href="{% url 'race:setup' %}">
+                New race
+            </a>
+        </section>
+
+        <section class="card">
+            <h2>Race events</h2>
+
+            {% for event in events %}
+            <p class="event">{{ event }}</p>
+            {% empty %}
+            <p>No abilities triggered yet.</p>
+            {% endfor %}
+        </section>
+
+        <section class="card">
+            <h2>Track sections</h2>
+
+            <div class="track">
+                {% for section in track %}
+                <div class="track-section">
+                    {{ section.name }}
+                    {{ section.type }}
+                    - {{ section.length }}m
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+</body>
+</html>

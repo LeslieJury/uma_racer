@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    color: #3d3545;
+    background: #f8f5fb;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.hero {
+    margin-bottom: 24px;
+}
+
+h1 {
+    margin: 0 0 8px;
+    color: #7259a8;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+h2 {
+    margin-top: 0;
+    color: #7259a8;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: white;
+    border: 1px solid #e1d7ed;
+}
+
+.curren-image {
+    display: block;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 10px;
+    object-fit: contain;
+}
+
+.uniform-image,
+.first-place-image {
+    display: block;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 10px;
+    object-fit: contain;
+}
+
+fieldset {
+    padding: 0;
+    margin: 0 0 20px;
+    border: 0;
+}
+
+legend,
+label[for] {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: normal;
+}
+
+.choice {
+    display: block;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.choice input {
+    margin-right: 8px;
+}
+
+.choice small,
+li small {
+    display: block;
+    margin-top: 4px;
+    color: #666666;
+    font-size: 16px;
+}
+
+select,
+button,
+.button {
+    padding: 9px 12px;
+    font-size: 16px;
+}
+
+select {
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+    background: white;
+    border: 1px solid #999999;
+}
+
+button,
+.button {
+    color: white;
+    background: #d86c9b;
+    border: 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover,
+.button:hover {
+    background: #bd5884;
+}
+
+.error {
+    color: #a00000;
+}
+
+.event {
+    padding: 8px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.track-section {
+    padding: 8px 0;
+    border-bottom: 1px solid #dddddd;
+}
+
+.track-section strong {
+    font-weight: normal;
+}
